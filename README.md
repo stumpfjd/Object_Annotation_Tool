@@ -9,7 +9,7 @@ The **YOLOv5 Video Annotation Tool** is a robust C# desktop application designed
 - **Video Frame Extraction**: Capture and annotate specific frames from video sources with ease.
 - **Precise Annotation Tools**: Draw tight bounding boxes with click-drag controls to accurately define objects of interest.
 - **Multi-Class Support**: Manage multiple classes via quick-access dropdown menus, supporting a diverse range of object types.
-- **Image Enhancement**: Adjust image quality directly in the tool with options for sharpening, blurring, contrast, and brightness adjustments.
+- **Image Enhancement**: Adjust image quality directly in the tool with options for sharpening, blurring, contrast, brightness, and median filter adjustments.
 - **YOLO Format Export**: Generate YOLOv5-compatible datasets, with annotations in YOLO format for seamless training integration.
 - **Batch Processing**: Efficiently process and annotate multiple frames in one session, enhancing productivity.
 - **Configurable Settings**: Customize class sets and annotation parameters to fit project needs.
