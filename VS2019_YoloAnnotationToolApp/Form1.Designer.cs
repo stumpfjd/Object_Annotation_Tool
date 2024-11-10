@@ -76,8 +76,10 @@ namespace VS2019_YoloAnnotationToolApp
             this.brightenBtn = new System.Windows.Forms.Button();
             this.darkenBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.medianBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.resetViewBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -289,7 +291,7 @@ namespace VS2019_YoloAnnotationToolApp
             this.tabControl1.Location = new System.Drawing.Point(947, 680);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(374, 128);
+            this.tabControl1.Size = new System.Drawing.Size(374, 136);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -298,7 +300,7 @@ namespace VS2019_YoloAnnotationToolApp
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(366, 102);
+            this.tabPage1.Size = new System.Drawing.Size(366, 110);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Graph Metrics";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -310,7 +312,7 @@ namespace VS2019_YoloAnnotationToolApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.OutPutRichTextBox1.Location = new System.Drawing.Point(3, 3);
             this.OutPutRichTextBox1.Name = "OutPutRichTextBox1";
-            this.OutPutRichTextBox1.Size = new System.Drawing.Size(357, 93);
+            this.OutPutRichTextBox1.Size = new System.Drawing.Size(357, 101);
             this.OutPutRichTextBox1.TabIndex = 0;
             this.OutPutRichTextBox1.Text = "";
             // 
@@ -374,7 +376,7 @@ namespace VS2019_YoloAnnotationToolApp
             // PathTextBox
             // 
             this.PathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.PathTextBox.Location = new System.Drawing.Point(70, 22);
+            this.PathTextBox.Location = new System.Drawing.Point(70, 30);
             this.PathTextBox.Name = "PathTextBox";
             this.PathTextBox.Size = new System.Drawing.Size(170, 20);
             this.PathTextBox.TabIndex = 9;
@@ -383,7 +385,7 @@ namespace VS2019_YoloAnnotationToolApp
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 25);
+            this.label2.Location = new System.Drawing.Point(6, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 10;
@@ -392,7 +394,7 @@ namespace VS2019_YoloAnnotationToolApp
             // dataPathSelectionButton
             // 
             this.dataPathSelectionButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataPathSelectionButton.Location = new System.Drawing.Point(246, 21);
+            this.dataPathSelectionButton.Location = new System.Drawing.Point(246, 29);
             this.dataPathSelectionButton.Name = "dataPathSelectionButton";
             this.dataPathSelectionButton.Size = new System.Drawing.Size(29, 20);
             this.dataPathSelectionButton.TabIndex = 11;
@@ -439,7 +441,7 @@ namespace VS2019_YoloAnnotationToolApp
             this.groupBox1.Controls.Add(this.minusTenSecBtn);
             this.groupBox1.Location = new System.Drawing.Point(15, 679);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(96, 127);
+            this.groupBox1.Size = new System.Drawing.Size(96, 137);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Video Control";
@@ -528,6 +530,8 @@ namespace VS2019_YoloAnnotationToolApp
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.resetViewBtn);
+            this.groupBox2.Controls.Add(this.medianBtn);
             this.groupBox2.Controls.Add(this.sharpenBtn);
             this.groupBox2.Controls.Add(this.darkenBtn);
             this.groupBox2.Controls.Add(this.blurrBtn);
@@ -535,10 +539,20 @@ namespace VS2019_YoloAnnotationToolApp
             this.groupBox2.Controls.Add(this.contrastBtn);
             this.groupBox2.Location = new System.Drawing.Point(117, 679);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(169, 127);
+            this.groupBox2.Size = new System.Drawing.Size(169, 137);
             this.groupBox2.TabIndex = 24;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Image Enhancement";
+            // 
+            // medianBtn
+            // 
+            this.medianBtn.Location = new System.Drawing.Point(88, 76);
+            this.medianBtn.Name = "medianBtn";
+            this.medianBtn.Size = new System.Drawing.Size(75, 23);
+            this.medianBtn.TabIndex = 24;
+            this.medianBtn.Text = "Median Ftlr";
+            this.medianBtn.UseVisualStyleBackColor = true;
+            this.medianBtn.Click += new System.EventHandler(this.medianBtn_Click);
             // 
             // groupBox3
             // 
@@ -548,7 +562,7 @@ namespace VS2019_YoloAnnotationToolApp
             this.groupBox3.Controls.Add(this.generateYMLButton);
             this.groupBox3.Location = new System.Drawing.Point(293, 679);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(290, 129);
+            this.groupBox3.Size = new System.Drawing.Size(290, 137);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Data Config Setup";
@@ -562,10 +576,20 @@ namespace VS2019_YoloAnnotationToolApp
             this.groupBox4.Controls.Add(this.clearSelectionButton);
             this.groupBox4.Location = new System.Drawing.Point(590, 680);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(351, 126);
+            this.groupBox4.Size = new System.Drawing.Size(351, 136);
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Image Annotation";
+            // 
+            // resetViewBtn
+            // 
+            this.resetViewBtn.Location = new System.Drawing.Point(6, 106);
+            this.resetViewBtn.Name = "resetViewBtn";
+            this.resetViewBtn.Size = new System.Drawing.Size(75, 23);
+            this.resetViewBtn.TabIndex = 25;
+            this.resetViewBtn.Text = "Reset View";
+            this.resetViewBtn.UseVisualStyleBackColor = true;
+            this.resetViewBtn.Click += new System.EventHandler(this.resetViewBtn_Click);
             // 
             // Form1
             // 
@@ -659,6 +683,8 @@ namespace VS2019_YoloAnnotationToolApp
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ToolStripMenuItem annotationProcessToolStripMenuItem;
+        private System.Windows.Forms.Button medianBtn;
+        private System.Windows.Forms.Button resetViewBtn;
     }
 }
 

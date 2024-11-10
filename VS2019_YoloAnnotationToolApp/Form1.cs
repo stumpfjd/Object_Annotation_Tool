@@ -1579,6 +1579,80 @@ namespace VS2019_YoloAnnotationToolApp
             }
         }
 
+        private void ImageMedianFilter()
+        {
+            if (loadedImage == null)
+            {
+                OutToLog("No image loaded for median filtering.");
+                return;
+            }
+
+            try
+            {
+                // Log the number of selections before median filtering
+                OutToLog($"Number of selections before median filtering: {selections.Count}");
+
+                Bitmap original = new Bitmap(loadedImage);
+                Bitmap filteredImage = new Bitmap(original.Width, original.Height);
+
+                // Define the filter kernel size (adjust as needed)
+                int kernelSize = 3;
+
+                // Apply median filtering
+                for (int x = kernelSize / 2; x < original.Width - kernelSize / 2; x++)
+                {
+                    for (int y = kernelSize / 2; y < original.Height - kernelSize / 2; y++)
+                    {
+                        List<int> redValues = new List<int>();
+                        List<int> greenValues = new List<int>();
+                        List<int> blueValues = new List<int>();
+
+                        for (int i = -kernelSize / 2; i <= kernelSize / 2; i++)
+                        {
+                            for (int j = -kernelSize / 2; j <= kernelSize / 2; j++)
+                            {
+                                Color pixel = original.GetPixel(x + i, y + j);
+                                redValues.Add(pixel.R);
+                                greenValues.Add(pixel.G);
+                                blueValues.Add(pixel.B);
+                            }
+                        }
+
+                        redValues.Sort();
+                        greenValues.Sort();
+                        blueValues.Sort();
+
+                        int medianIndex = kernelSize * kernelSize / 2;
+                        int medianRed = redValues[medianIndex];
+                        int medianGreen = greenValues[medianIndex];
+                        int medianBlue = blueValues[medianIndex];
+
+
+                        filteredImage.SetPixel(x, y, Color.FromArgb(medianRed, medianGreen, medianBlue));
+                    }
+                }
+
+                // Store the current selections
+                List<LabeledSelection> currentSelections = new List<LabeledSelection>(selections);
+
+                // Log the number of stored selections
+                OutToLog($"Number of stored selections: {currentSelections.Count}");
+
+                // Replace the original image with the filtered one
+                loadedImage.Dispose();
+                loadedImage = filteredImage;
+
+                // Refresh the display
+                ResetView();
+                panel1.Invalidate();
+                panel1.Update(); // Force immediate redraw
+            }
+            catch (Exception ex)
+            {
+                OutToLog($"Error during median filtering: {ex.Message}");
+            }
+        }
+
         private void ShowHelpPopup()
         {
             string helpText = @"YOLO-like Annotation Tool Help
@@ -1808,6 +1882,13 @@ namespace VS2019_YoloAnnotationToolApp
             OutToLog($"After darkening, selections count: {selections.Count}");
         }
 
+        private void medianBtn_Click(object sender, EventArgs e)
+        {
+            OutToLog("Median Filter button clicked");
+            ImageMedianFilter();
+            OutToLog($"After Applying Median Filter, selections count: {selections.Count}");
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             if (Properties.Settings.Default.dataPath.Length == 0)
@@ -1824,6 +1905,14 @@ namespace VS2019_YoloAnnotationToolApp
         {
             Properties.Settings.Default.dataPath = PathTextBox.Text;
             Properties.Settings.Default.Save();
+        }
+
+        private void resetViewBtn_Click(object sender, EventArgs e)
+        {
+            // Refresh the display
+            ResetView();
+            panel1.Invalidate();
+            panel1.Update(); // Force immediate redraw
         }
     }
 }
