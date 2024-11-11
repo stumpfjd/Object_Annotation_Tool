@@ -84,6 +84,10 @@ We welcome contributions to improve this tool. Feel free to submit bug reports, 
 
 [MIT Licsense]
 
+## Third Party Libraries
+
+This project uses:
+- YamlDotNet 15.1.1 (MIT License) - Copyright (c) 2008-2014 Antoine Aubry and contributors
 ---
 
 By using this tool, you can significantly expedite the creation of high-quality training data for your YOLOv5 models, leading to more accurate and robust object detection and tracking systems.
