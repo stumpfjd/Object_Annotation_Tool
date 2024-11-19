@@ -54,7 +54,6 @@ namespace VS2019_YoloAnnotationToolApp
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.OutPutRichTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.snapShotButton = new System.Windows.Forms.Button();
             this.processImageLabelDataButton = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -76,10 +75,10 @@ namespace VS2019_YoloAnnotationToolApp
             this.brightenBtn = new System.Windows.Forms.Button();
             this.darkenBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.resetViewBtn = new System.Windows.Forms.Button();
             this.medianBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.resetViewBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -287,7 +286,6 @@ namespace VS2019_YoloAnnotationToolApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(947, 680);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -302,7 +300,7 @@ namespace VS2019_YoloAnnotationToolApp
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(366, 110);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Graph Metrics";
+            this.tabPage1.Text = "Output Log";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // OutPutRichTextBox1
@@ -315,16 +313,6 @@ namespace VS2019_YoloAnnotationToolApp
             this.OutPutRichTextBox1.Size = new System.Drawing.Size(357, 101);
             this.OutPutRichTextBox1.TabIndex = 0;
             this.OutPutRichTextBox1.Text = "";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(366, 102);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // snapShotButton
             // 
@@ -544,6 +532,16 @@ namespace VS2019_YoloAnnotationToolApp
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Image Enhancement";
             // 
+            // resetViewBtn
+            // 
+            this.resetViewBtn.Location = new System.Drawing.Point(6, 106);
+            this.resetViewBtn.Name = "resetViewBtn";
+            this.resetViewBtn.Size = new System.Drawing.Size(75, 23);
+            this.resetViewBtn.TabIndex = 25;
+            this.resetViewBtn.Text = "Reset View";
+            this.resetViewBtn.UseVisualStyleBackColor = true;
+            this.resetViewBtn.Click += new System.EventHandler(this.resetViewBtn_Click);
+            // 
             // medianBtn
             // 
             this.medianBtn.Location = new System.Drawing.Point(88, 76);
@@ -580,16 +578,6 @@ namespace VS2019_YoloAnnotationToolApp
             this.groupBox4.TabIndex = 26;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Image Annotation";
-            // 
-            // resetViewBtn
-            // 
-            this.resetViewBtn.Location = new System.Drawing.Point(6, 106);
-            this.resetViewBtn.Name = "resetViewBtn";
-            this.resetViewBtn.Size = new System.Drawing.Size(75, 23);
-            this.resetViewBtn.TabIndex = 25;
-            this.resetViewBtn.Text = "Reset View";
-            this.resetViewBtn.UseVisualStyleBackColor = true;
-            this.resetViewBtn.Click += new System.EventHandler(this.resetViewBtn_Click);
             // 
             // Form1
             // 
@@ -649,7 +637,6 @@ namespace VS2019_YoloAnnotationToolApp
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.RichTextBox OutPutRichTextBox1;
-        private System.Windows.Forms.TabPage tabPage2;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.ToolStripMenuItem videoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem imageToolStripMenuItem;
