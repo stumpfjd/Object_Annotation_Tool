@@ -1,7 +1,7 @@
 <div align="center">
 
 # **YOLOv5 Video Annotation Tool**
-
+![Logo of CrewAI, two people rowing on a boat](./docs/VATool.png)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 </div>
