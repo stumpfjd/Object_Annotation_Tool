@@ -1753,7 +1753,7 @@ namespace VS2019_YoloAnnotationToolApp
 
             Once satisfied with the annotations, 
             click 'Process Image Label Data' to save the 
-            annotations as a YOLO dataset.
+            annotations as a Object dataset.
 
             The user can perform various image 
             processing techniques using the provided buttons:
@@ -1776,7 +1776,7 @@ namespace VS2019_YoloAnnotationToolApp
 
             Ctrl +/-: Zoom in/out
             Ctrl 0: Reset view
-            Ctrl S: Create YOLO dataset
+            Ctrl S: Create Object dataset
             Ctrl Y: Generate dataset config
             Ctrl C: Clear all selections
 
