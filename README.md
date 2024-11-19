@@ -1,13 +1,13 @@
 <div align="center">
 
 ![Video Annotation Tool](./docs/VATool.png)
-# **YOLOv5 Video Annotation Tool**
+# **C# Desktop Tool for Efficient Video Frame Annotation**
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 </div>
 
 
-The **YOLOv5 Video Annotation Tool** is a robust C# desktop application designed to streamline the process of creating high-quality training datasets for YOLOv5 object detection models through efficient video frame annotation. Built to optimize computer vision data preparation workflows, this tool offers an intuitive interface and precise controls for accurate object labeling, making it ideal for tasks like object detection, tracking, and segmentation.
+The **Video Annotation Tool for Object Detection** is a robust C# desktop application designed to streamline the process of creating high-quality training datasets for object detection models through efficient video frame annotation. Built to optimize computer vision data preparation workflows, this tool offers an intuitive interface and precise controls for accurate object labeling, making it ideal for tasks like object detection, tracking, and segmentation.
 
 ---
 
@@ -17,7 +17,7 @@ The **YOLOv5 Video Annotation Tool** is a robust C# desktop application designed
 - **Precise Annotation Tools**: Draw tight bounding boxes with click-drag controls to accurately define objects of interest.
 - **Multi-Class Support**: Manage multiple classes via quick-access dropdown menus, supporting a diverse range of object types.
 - **Image Enhancement**: Adjust image quality directly in the tool with options for sharpening, blurring, contrast, brightness, and median filter adjustments.
-- **YOLO Format Export**: Generate YOLOv5-compatible datasets, with annotations in YOLO format for seamless training integration.
+- **Popular Model Format Export**: Generate YOLOv5-compatible datasets, with annotations in YOLO format for seamless training integration.
 - **Batch Processing**: Efficiently process and annotate multiple frames in one session, enhancing productivity.
 - **Configurable Settings**: Customize class sets and annotation parameters to fit project needs.
 
@@ -78,7 +78,7 @@ The **YOLOv5 Video Annotation Tool** is a robust C# desktop application designed
 ## Technical Details
 
 - **Custom C# Implementation**: Optimized for efficient memory management and real-time processing.
-- **YOLO-Compatible Exports**: Create structured, validation-ready dataset files.
+- **Popular Format-Compatible Exports**: Create structured, validation-ready dataset files.
 - **System Requirements**: Requires Windows OS, .NET Framework (specific version pending), and a minimum of 4GB RAM.
 
 ---
@@ -103,6 +103,6 @@ This project uses:
 - YamlDotNet 15.1.1 (MIT License) - Copyright (c) 2008-2014 Antoine Aubry and contributors
 ---
 
-By using this tool, you can significantly expedite the creation of high-quality training data for your YOLOv5 models, leading to more accurate and robust object detection and tracking systems.
+By using this tool, you can significantly expedite the creation of high-quality training data for your Standard models, leading to more accurate and robust object detection and tracking systems.
 
 ```
