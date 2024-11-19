@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VS2019_YoloAnnotationToolApp.Properties {
+namespace VS2019_ObjectAnnotationToolApp.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

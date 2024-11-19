@@ -1,5 +1,5 @@
 ﻿
-namespace VS2019_YoloAnnotationToolApp
+namespace VS2019_ObjectAnnotationToolApp
 {
     partial class Form1
     {

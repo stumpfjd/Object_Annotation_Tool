@@ -11,7 +11,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
  
 
-namespace VS2019_YoloAnnotationToolApp
+namespace VS2019_ObjectAnnotationToolApp
 {
     public enum ClassName
     {
@@ -283,7 +283,7 @@ namespace VS2019_YoloAnnotationToolApp
                                 Ctrl + +: Zoom in
                                 Ctrl + -: Zoom out
                                 Ctrl + 0: Reset view
-                                Ctrl + S: Create YOLO dataset
+                                Ctrl + S: Create Object Detection YAML dataset
                                 Ctrl + Y: Generate dataset config
                                 Ctrl + C: Clear all selections
                                 Left Arrow: Move video backward
@@ -454,7 +454,7 @@ namespace VS2019_YoloAnnotationToolApp
                         ResetView();
                         break;
                     case Keys.S:
-                        CreateYoloDataset();
+                        CreateYamlDataset();
                         break;
                     case Keys.Y:
                         GenerateDatasetConfig();
@@ -951,8 +951,8 @@ namespace VS2019_YoloAnnotationToolApp
         }
         #endregion
 
-        #region YOLO Dataset Generation
-        private void CreateYoloDataset()
+        #region YAML Dataset Generation
+        private void CreateYamlDataset()
         {
             string datasetPath = Path.Combine(PathTextBox.Text, "datasets");
             string datasetImagePath = Path.Combine(datasetPath, "images", "train");
@@ -977,7 +977,7 @@ namespace VS2019_YoloAnnotationToolApp
             selections.Clear();
             panel1.Invalidate();
 
-            OutToLog("YOLOv5 dataset created successfully!");
+            OutToLog("Object Detection YAML dataset created successfully!");
         }
 
         private void WriteLabelFile(string labelFile, List<LabeledSelection> labelInfos)
@@ -1162,7 +1162,7 @@ namespace VS2019_YoloAnnotationToolApp
 
         private void processImageLabelDataButton_Click(object sender, EventArgs e)
         {
-            CreateYoloDataset();
+            CreateYamlDataset();
         }
 
         private void generateYMLButton_Click(object sender, EventArgs e)
@@ -1655,7 +1655,7 @@ namespace VS2019_YoloAnnotationToolApp
 
         private void ShowHelpPopup()
         {
-            string helpText = @"YOLO-like Annotation Tool Help
+            string helpText = @"Object Detection Annotation Tool Help
 
             The importance of providing high-quality data for computer vision models is emphasized. The focus is on annotating images for object detection models, specifically for a chess piece detection example. The seven key techniques covered are:
  
@@ -1686,7 +1686,7 @@ namespace VS2019_YoloAnnotationToolApp
 
         private void ShowHelpPopup2()
         {
-            string helpText = @"YOLO-like Annotation Tool Help
+            string helpText = @"Object Detection Annotation Tool Help
             Image Annotation:
             1. Load an image: File > Image or right - click > Load 
                Image
@@ -1713,7 +1713,7 @@ namespace VS2019_YoloAnnotationToolApp
             Keyboard Shortcuts:
             Ctrl + +/-: Zoom in/out
             Ctrl + 0: Reset view
-            Ctrl + S: Create YOLO dataset
+            Ctrl + S: Create Object Detection (YAML) dataset
             Ctrl + Y: Generate dataset config
             Ctrl + C: Clear all selections
             Left/Right Arrow: Navigate video
@@ -1734,7 +1734,7 @@ namespace VS2019_YoloAnnotationToolApp
         private void ShowHelpPopup3()
         {
             string helpText = @"The user can generate a 
-            valid YOLO5 Training set using the given 
+            valid Object Detection (YAML) Training set using the given 
             code by following these steps:
             Load an image or video file using either 
             'File > Image' or right-clicking and 
@@ -1797,8 +1797,8 @@ namespace VS2019_YoloAnnotationToolApp
             The code also provides various event handlers 
             to handle different actions such as 
             loading images, capturing video frames, 
-            adjusting brightness, and generating YOLO 
-            dataset. The code includes a Dispose method 
+            adjusting brightness, and generating Object Detection
+            YAML dataset. The code includes a Dispose method 
             to properly release resources when the form is closed.
 
             As part of this implementation:

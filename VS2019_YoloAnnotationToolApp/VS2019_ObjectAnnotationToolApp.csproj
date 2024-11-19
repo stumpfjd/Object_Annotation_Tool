@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2DABD056-65DE-4ADC-A6FB-1681835ED1B3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>VS2019_YoloAnnotationToolApp</RootNamespace>
-    <AssemblyName>VS2019_YoloAnnotationToolApp</AssemblyName>
+    <RootNamespace>VS2019_ObjectAnnotationToolApp</RootNamespace>
+    <AssemblyName>VS2019_ObjectAnnotationToolApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -85,7 +85,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="YOLOv5DatasetCreator.cs" />
+    <Compile Include="ObjectDatasetCreator.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -108,7 +109,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="VS2019_YoloAnnotationToolApp_TemporaryKey.pfx" />
+    <None Include="VS2019_ObjectAnnotationToolApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

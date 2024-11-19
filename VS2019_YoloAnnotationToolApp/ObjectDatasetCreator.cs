@@ -6,7 +6,7 @@ using System.Text;
 using YamlDotNet.Serialization; // Use YamlDotNet for YAML generation
 using System.Text.RegularExpressions;
 
-namespace VS2019_YoloAnnotationToolApp
+namespace VS2019_ObjectAnnotationToolApp
 {
     public class LabelInfo
     {

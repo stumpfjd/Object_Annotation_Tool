@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VS2019_YoloAnnotationToolApp
+namespace VS2019_ObjectAnnotationToolApp
 {
     static class Program
     {
