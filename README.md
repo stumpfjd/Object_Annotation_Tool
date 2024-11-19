@@ -17,7 +17,7 @@ The **Video Annotation Tool for Object Detection** is a robust C# desktop applic
 - **Precise Annotation Tools**: Draw tight bounding boxes with click-drag controls to accurately define objects of interest.
 - **Multi-Class Support**: Manage multiple classes via quick-access dropdown menus, supporting a diverse range of object types.
 - **Image Enhancement**: Adjust image quality directly in the tool with options for sharpening, blurring, contrast, brightness, and median filter adjustments.
-- **Popular Model Format Export**: Generate YOLOv5-compatible datasets, with annotations in YOLO format for seamless training integration.
+- **Popular Model Format Export**: Generate Popular Model-compatible datasets, with annotations in YOLO format for seamless training integration.
 - **Batch Processing**: Efficiently process and annotate multiple frames in one session, enhancing productivity.
 - **Configurable Settings**: Customize class sets and annotation parameters to fit project needs.
 
@@ -43,7 +43,7 @@ The **Video Annotation Tool for Object Detection** is a robust C# desktop applic
 
 - `Ctrl + / -`: Zoom in/out
 - `Ctrl + 0`: Reset view
-- `Ctrl + S`: Save annotations to YOLO format
+- `Ctrl + S`: Save annotations to popular object model format
 - `Ctrl + Y`: Generate YAML configuration
 - `Ctrl + C`: Clear selections
 - `Arrow Keys`: Navigate video frames
