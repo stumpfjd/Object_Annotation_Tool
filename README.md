@@ -99,7 +99,4 @@ This project uses:
 
 By using this tool, you can significantly expedite the creation of high-quality training data for your YOLOv5 models, leading to more accurate and robust object detection and tracking systems.
 
-[Optional: Add a link to a demo video or tutorial]
-
-[Optional: Add specific installation instructions or dependencies]
 ```
