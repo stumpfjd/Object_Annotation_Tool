@@ -1,4 +1,11 @@
-# YOLOv5 Video Annotation Tool
+<div align="center">
+
+# **YOLOv5 Video Annotation Tool**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+</div>
+
 
 The **YOLOv5 Video Annotation Tool** is a robust C# desktop application designed to streamline the process of creating high-quality training datasets for YOLOv5 object detection models through efficient video frame annotation. Built to optimize computer vision data preparation workflows, this tool offers an intuitive interface and precise controls for accurate object labeling, making it ideal for tasks like object detection, tracking, and segmentation.
 
