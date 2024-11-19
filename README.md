@@ -21,6 +21,12 @@ The **YOLOv5 Video Annotation Tool** is a robust C# desktop application designed
 - **Batch Processing**: Efficiently process and annotate multiple frames in one session, enhancing productivity.
 - **Configurable Settings**: Customize class sets and annotation parameters to fit project needs.
 
+<div align="center">
+
+![Video Annotation Tool App Screen Shot](./docs/App_Screen_Shot.png)
+
+</div>
+
 ---
 
 ## Professional Annotation Features
